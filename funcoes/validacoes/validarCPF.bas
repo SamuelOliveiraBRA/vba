@@ -29,14 +29,9 @@ For etapa = 1 To 2
     TamanhoCPF = IIf(etapa = 1, 9, 10)      'tamanho para o cálculo
     
     For posicao = 1 To TamanhoCPF
-    
-        If Mid(CPF, posicao, 1) Like "[0-9]" Then
-        
-            CalculoDigito = CalculoDigito + Mid(CPF, posicao, 1) * multiplicador: multiplicador = multiplicador - 1
-        
-        End If
-        
+        CalculoDigito = CalculoDigito + Mid(CPF, posicao, 1) * multiplicador: multiplicador = multiplicador - 1
     Next posicao
+        
     CalculoDigito = IIf(CalculoDigito Mod 11 < 2, 0, 11 - (CalculoDigito Mod 11))
     strCPF = strCPF & CalculoDigito
     CalculoDigito = 0
