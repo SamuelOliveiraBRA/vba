@@ -5,7 +5,7 @@ Function validarCNPJ(numeroCNPJ)
 '========================================================
 ' OBJETIVO:         Módulo de validação de CPF          =
 ' DESENVOLVEDOR:    Samuel Oliveira                     =
-' CONTATO:          samuel.santos@oprograma.com         =
+' CONTATO:          oprograma@oprograma.com             =
 ' WEB SITE          www.oprograma.com                   =
 ' Copyright 2014 Todos os direitos reservados           =
 '========================================================
