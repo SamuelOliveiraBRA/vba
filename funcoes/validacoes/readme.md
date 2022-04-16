@@ -1,5 +1,12 @@
 ### **VALIDAÇÕES DE CPF OU CNPJ**
 
+## Instalação
+Para realizar a instalação, basta criar um arquivo com extensão **.bas** e depois importar para o seu projeto através do Menu do aplicativo do office na **Janela de Propriedades** e clicar em *Arquivo >  Importar Arquivo* ou pressionar *CTRL + M*
+
+<div>
+  <img alt="Propriedade do Sistema" src="https://doutorexcel.files.wordpress.com/2011/03/editor-vba1.jpg"/>
+</div>
+
 #### validarCPF()
 -Realiza a valiação do CPF de acordo com o número que é passado como parâmetro
 > o valor de retorno original é o valor de **False** e medida que é validado, ele retorna como **True**
