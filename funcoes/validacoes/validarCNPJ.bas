@@ -1,4 +1,5 @@
 Function validarCNPJ(numeroCNPJ)
+On Error Goto TratarErro
 
 '========================================================
 ' VALIDAÇÃO DE CNPJ                                     =
@@ -45,5 +46,11 @@ If CStr(Right(CNPJ, 2)) = CStr(strCNPJ) Then validado = True
 If InStr(1, cnpjInvalidos, CNPJ) > 0 Then validado = False
 
 validarCNPJ = validado
+          
+SairFunction:
+Exit Function
 
+TratarErro:
+MsgBox "Ocorreu um erro ao processar o comando:" & vbCrLf & Err.Description, vbExclamation, " Erro " & Err.Number
+Resume SairFunction
 End Function
