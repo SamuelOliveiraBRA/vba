@@ -1,4 +1,5 @@
 Function validarCPF(numeroCPF)
+On Error Goto TratarErro
 
 '========================================================
 ' VALIDAÇÃO DE CPF                                      =
@@ -44,4 +45,10 @@ If InStr(1, cpfInvalidos, CPF) > 0 Then validado = False
 
 validarCPF = validado
 
+SairFunction:
+Exit Function
+
+TratarErro:
+MsgBox "Ocorreu um erro ao processar o comando:" & vbCrLf & Err.Description, vbExclamation, " Erro " & Err.Number
+Resume SairFunction
 End Function
