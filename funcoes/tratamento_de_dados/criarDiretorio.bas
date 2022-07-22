@@ -6,8 +6,6 @@ On Error GoTo TratarErro
 '========================================================
 ' OBJETIVO:         Módul para criar diretórios         =
 ' DESENVOLVEDOR:    Samuel Oliveira                     =
-' CONTATO:          samuel.santos@oprograma.com         =
-' WEB SITE          www.oprograma.com                   =
 ' Copyright 2020 Todos os direitos reservados           =
 '========================================================
 ' OBSERVAÇÕES                                           =
