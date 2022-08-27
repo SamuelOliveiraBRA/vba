@@ -23,3 +23,7 @@ Realiza o desmembramento de texto de acordo com os delimitadores
 [**mascaraTelefone**](https://github.com/SamuelOliveiraBRA/vba/blob/main/funcoes/tratamento_de_dados/MascaraTelefone)
 
 Cria a máscara para telefone no formato (00) 0000-0000 ou (00) 00000-0000
+
+[**mascaraCEP**](https://github.com/SamuelOliveiraBRA/vba/blob/main/funcoes/tratamento_de_dados/MascaraCEP)
+
+Cria a máscara para CEP no formato 00000-000
