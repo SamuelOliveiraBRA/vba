@@ -1,0 +1,25 @@
+Function MascaraCEP(ByVal KeyAscii As MSForms.ReturnInteger, Formulario, NomeCampo)
+
+'ADAPTADOR POR SAMUEL OLIVEIRA
+Dim Form As Object
+Dim Campo As Object
+
+For Each Form In UserForms
+    If LCase(Form.Name) = LCase(Formulario) Then Set Form = Form: Exit For
+Next Form
+
+For Each Campo In Form.Controls
+    If LCase(Campo.Name) = LCase(NomeCampo) Then Set Campo = Campo: Exit For
+Next Campo
+
+'TECLADO FÍSICO
+Select Case KeyAscii
+    Case 13: SendKeys "{TAB}"   'TAB
+    Case 48 To 57               'APENAS DO 0 AO 9
+    
+        If Campo.SelStart = 5 Then Campo.Value = Campo.Value & "-": Campo.MaxLength = 9
+    
+    Case Else: KeyAscii = 0
+End Select
+
+End Function
