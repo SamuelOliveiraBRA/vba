@@ -1,4 +1,4 @@
-**Function MascaraTelefone(ByVal KeyAscii As MSForms.ReturnInteger, Formulario, NomeCampo)**
+Function MascaraTelefone(ByVal KeyAscii As MSForms.ReturnInteger, Formulario, NomeCampo)
 
 'ADAPTADOR POR SAMUEL OLIVEIRA
 
@@ -31,4 +31,4 @@ Select Case KeyAscii
     Case Else: KeyAscii = 0
 End Select
 
-**End Function**
+End Function
