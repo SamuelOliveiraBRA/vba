@@ -1,0 +1,51 @@
+Function MascaraCPFCNPJ(ByVal KeyAscii As MSForms.ReturnInteger, Formulario, NomeCampo)
+
+'CRIADO POR SAMUEL OLIVEIRA
+'GITHUB GitHub.com/SamuelOliveiraBRA
+
+Dim Form As Object
+Dim Campo As Object
+
+For Each Form In UserForms
+    If Form.Name = Formulario Then Set Form = Form: Exit For
+Next Form
+
+For Each Campo In Form.Controls
+    If LCase(Campo.Name) = LCase(NomeCampo) Then Set Campo = Campo: Exit For
+Next Campo
+
+If KeyAscii = 8 And Len(Campo.Value) = 14 Or Len(Campo.Value) = 18 Then SendKeys "{TAB}"
+
+'TECLADO FÍSICO
+Select Case KeyAscii
+
+    'Case 8                     'BACKSPACE
+    Case 13: SendKeys "{TAB}"   'TAB
+    Case 48 To 57               'APENAS DO 0 AO 9
+    
+        'SE ESTIVER APAGANDO O TEXTO
+        If KeyCode = 8 And Len(Campo.Value) = 14 Then Campo.Value = Replace(Replace(Campo.Value, ".", ""), "/", ""): Campo.Value = Mid(Campo.Value, 1, 3) & "." & Mid(Campo.Value, 4, 3) & "." & Mid(Campo.Value, 7, 3) & "-" & Mid(Campo.Value, 10, 2)
+    
+        'VALIDAÇÃO DO CPF
+        If Len(Campo.Value) < 14 And Mid(Campo.Value, 2, 1) <> "." Then
+            If Campo.SelStart = 3 Then Campo.Value = Campo.Value & "."
+            If Campo.SelStart = 7 Then Campo.Value = Campo.Value & "."
+            If Campo.SelStart = 11 Then Campo.Value = Campo.Value & "-"
+            
+            Else
+            
+            If Len(Campo.Value) = 15 And Mid(Campo.Value, 3, 1) <> "." Then
+                Campo.Value = Replace(Replace(Campo, ".", ""), "-", "")
+                
+                Campo.Value = Mid(Campo.Value, 1, 2) & "." & Mid(Campo.Value, 3, 3) & "." & Mid(Campo.Value, 6, 3) & "/" & Mid(Campo.Value, 9, 4): Campo.MaxLength = 18
+            End If
+            
+            If Campo.SelStart = 15 Then Campo.Value = Campo.Value & "-"
+            
+        End If
+    
+    Case Else: KeyAscii = 0
+    
+End Select
+
+End Function
