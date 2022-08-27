@@ -24,6 +24,6 @@ Cria um diretório escalonado de acordo com os parâmetros passados
 
 Realiza o desmembramento de texto de acordo com os delimitadores
 
-***mascaraTelefone*
+***mascaraTelefone**
 
 Cria a máscara para telefone no formato (00) 0000-0000 ou (00) 00000-0000
