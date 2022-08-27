@@ -1,6 +1,6 @@
 ## **Tratamento de Dados**
 
-**LerPropriedadesArquivo.bas**
+[**LerPropriedadesArquivo.bas**](https://github.com/SamuelOliveiraBRA/vba/blob/main/funcoes/tratamento_de_dados/LerPropriedadesArquivo.bas)
 
 Realiza a leitura do arquivo que é passado como parâmetro
 
