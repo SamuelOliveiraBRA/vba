@@ -16,8 +16,7 @@ Consulta o CEP e traz os dados de logradouro, bairro, cidade e UF
 
 Cria um diretório escalonado de acordo com os parâmetros passados
 
-
-**dividirTexto.bas**
+[**dividirTexto.bas**](https://github.com/SamuelOliveiraBRA/vba/blob/main/funcoes/tratamento_de_dados/dividirTexto.bas)
 
 Realiza o desmembramento de texto de acordo com os delimitadores
 
