@@ -1,0 +1,34 @@
+**Function MascaraTelefone(ByVal KeyAscii As MSForms.ReturnInteger, Formulario, NomeCampo)**
+
+'ADAPTADOR POR SAMUEL OLIVEIRA
+
+Dim Form As Object
+Dim Campo As Object
+
+For Each Form In UserForms
+    If Form.Name = Formulario Then Set Form = Form: Exit For
+Next Form
+
+For Each Campo In Form.Controls
+    If LCase(Campo.Name) = LCase(NomeCampo) Then Set Campo = Campo: Exit For
+Next Campo
+
+'TECLADO FÍSICO
+Select Case KeyAscii
+    Case 8                      'BACKSPACE
+    Case 13: SendKeys "{TAB}"   'TAB
+    Case 48 To 57               'APENAS DO 0 AO 9
+    
+        If Campo.SelStart = 0 Then Campo.Value = "("
+        If Campo.SelStart = 3 Then Campo.Value = Campo.Value & ") "
+        
+        If Mid(Campo.Value, 6, 1) = "9" Then
+            If Campo.SelStart = 10 Then Campo.Value = Campo.Value & "-": Campo.MaxLength = 15
+            Else
+            If Campo.SelStart = 9 Then Campo.Value = Campo.Value & "-": Campo.MaxLength = 14
+        End If
+    
+    Case Else: KeyAscii = 0
+End Select
+
+**End Function**
