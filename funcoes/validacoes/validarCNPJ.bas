@@ -4,7 +4,7 @@ On Error Goto TratarErro
 '========================================================
 ' VALIDAÇÃO DE CNPJ                                     =
 '========================================================
-' OBJETIVO:         Módulo de validação de CPF          =
+' OBJETIVO:         Módulo de validação de CNPJ         =
 ' DESENVOLVEDOR:    Samuel Oliveira                     =
 ' Copyright 2014 Todos os direitos reservados           =
 '========================================================
