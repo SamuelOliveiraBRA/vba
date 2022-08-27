@@ -22,8 +22,12 @@ Realiza o desmembramento de texto de acordo com os delimitadores
 
 [**mascaraTelefone**](https://github.com/SamuelOliveiraBRA/vba/blob/main/funcoes/tratamento_de_dados/MascaraTelefone)
 
-Cria a máscara para telefone no formato (00) 0000-0000 ou (00) 00000-0000
+Cria a máscara automática para telefone no formato (00) 0000-0000 ou (00) 00000-0000
 
 [**mascaraCEP**](https://github.com/SamuelOliveiraBRA/vba/blob/main/funcoes/tratamento_de_dados/MascaraCEP)
 
-Cria a máscara para CEP no formato 00000-000
+Cria a máscara automática para CEP no formato 00000-000
+
+[**mascaraCPFCNPJ**](https://github.com/SamuelOliveiraBRA/vba/blob/main/funcoes/tratamento_de_dados/MascaraCPFCNPJ)
+
+Cria a máscara automática para CPF ou CNPJ no formato 000.000.000-00 ou 00.000.000/0000-00
