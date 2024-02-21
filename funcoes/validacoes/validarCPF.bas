@@ -1,4 +1,4 @@
-Function validarCPF(numeroCPF)
+Function validarCPF(numeroCPF as String) as boolean
 On Error Goto TratarErro
 
 '========================================================
